@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Alpine } from "alpinejs";
+
+---
+<!-- BU SAYFADA ALPİNE.JS KULLANILMIŞTIR. -->
+<Layout title="Kayıt">
+    <div class="bg-dark p-2 text-white bg-opacity-75">
+        <h1 class="text-center">Topluluk Kayıt Ekranı</h1>
+        <img
+            src="/img/topluluk2.jpg "
+            alt=""
+            style="padding-left: 550px; padding-top: 10px; height:400px"
+        />
+        <br><br><br>
+        <div class=" text-center  " style="padding-left: 600px; padding-right: 600px; ">
+            <label for="inputState" class="form-label ">Topluluk Seçiniz</label>
+            <select id="inputState" class="form-select">
+                <option selected></option>
+                <option>Yazget</option>
+                <option>Santraç</option>
+                <option>Basket</option>
+                <option>Futbol</option>
+                <option>Dans</option>
+            </select>
+        </div>
+        <form class="row g-3" style="padding: 100px; ">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+            </div>
+            <div class="col-md-6">
+                <label for="inputState" class="form-label">Bölüm</label>
+                <select id="inputState" class="form-select">
+                    <option selected></option>
+                    <option>Bilgisayar Programcılığı</option>
+                    <option>Kontrol ve Otomasyon</option>
+                    <option>Eser Koruma</option>
+                    <option>Bitki Koruma</option>
+                    <option>Mantarcılık</option>
+                    <option>Turizm ve Animasyon</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Öğrenci Numarası</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder=""
+                />
+            </div>
+           
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Şehir</label>
+                <input type="text" class="form-control" id="inputCity" />
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Cinsiyet</label>
+                <select id="inputState" class="form-select">
+                    <option selected></option>
+                    <option>Erkek</option>
+                    <option>Kız</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Yaş</label>
+                <input type="text" class="form-control" id="inputZip" />
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="gridCheck"
+                    />
+                    <label class="form-check-label" for="gridCheck">
+                        Bilgiler Doğru
+                    </label>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <button type="submit" class="btn btn-prim" > </button>  
+            </div>
+            <div x-data="{ isVisible: false }">
+                <button x-on:click="isVisible = !isVisible">Kayıt Ol</button>
+                <div x-show="isVisible">Kayıdınız başarılı</div>
+              </div>
+              
+        </form>
+        <br><br><br><br>
+    </div>
+    
+    
+</Layout>
